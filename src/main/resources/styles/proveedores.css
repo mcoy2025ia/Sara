@@ -1,0 +1,581 @@
+.service-layout {
+    -fx-alignment: top-left;
+}
+
+.service-form {
+    -fx-padding: 0 0 0 8;
+}
+
+.service-form .text-area {
+    -fx-background-color: white;
+    -fx-background-radius: 9;
+    -fx-border-color: #E1E3EA;
+    -fx-border-radius: 9;
+    -fx-prompt-text-fill: #ADB0BD;
+    -fx-padding: 8 10;
+}
+
+.service-form .text-area:focused {
+    -fx-border-color: #D71920;
+}
+
+.service-state {
+    -fx-background-color: #FFF3DC;
+    -fx-text-fill: #A96A00;
+    -fx-padding: 8 13;
+    -fx-background-radius: 18;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.service-list,
+.availability-list {
+    -fx-background-color: white;
+    -fx-border-color: #E8E9EF;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.service-list .list-cell,
+.availability-list .list-cell {
+    -fx-background-color: white;
+    -fx-padding: 13;
+    -fx-text-fill: #404255;
+    -fx-border-color: transparent transparent #F0F1F5 transparent;
+}
+
+.service-list .list-cell:selected,
+.availability-list .list-cell:selected {
+    -fx-background-color: #FFF0F1;
+    -fx-text-fill: #D71920;
+}
+
+.btn-danger {
+    -fx-background-color: #FFF0F0;
+    -fx-text-fill: #BA2424;
+}
+
+.btn-danger:hover {
+    -fx-background-color: #FBE1E3;
+}
+
+.menu-item {
+    -fx-cursor: hand;
+}
+
+.info-card .muted {
+    -fx-wrap-text: true;
+}
+.publication-list {
+    -fx-background-color: white;
+    -fx-border-color: #E8E9EF;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.publication-list .list-cell {
+    -fx-background-color: white;
+    -fx-padding: 13;
+    -fx-text-fill: #404255;
+    -fx-border-color: transparent transparent #F0F1F5 transparent;
+}
+
+.publication-list .list-cell:hover {
+    -fx-background-color: #FFF8F8;
+    -fx-cursor: hand;
+}
+
+.publication-list .list-cell:selected {
+    -fx-background-color: #FFF0F1;
+    -fx-border-color: #D71920;
+    -fx-border-width: 0 0 0 3px;
+}
+/* Iconos de categoria en la lista de servicios */
+
+.service-category-icon {
+    -fx-min-width: 42px;
+    -fx-pref-width: 42px;
+    -fx-min-height: 42px;
+    -fx-pref-height: 42px;
+
+    -fx-alignment: center;
+
+    -fx-background-color: #FFF0F1;
+    -fx-background-radius: 10px;
+
+    -fx-text-fill: #D71920;
+    -fx-font-size: 18px;
+}
+
+
+/* Estados de los servicios */
+
+.service-status,
+.service-status-detail {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.status-available {
+    -fx-text-fill: #238653;
+}
+
+.status-draft {
+    -fx-text-fill: #9A7418;
+}
+
+.status-retired {
+    -fx-text-fill: #B34444;
+}
+/* Prueba de galeria de servicios */
+
+.provider-gallery-content {
+    -fx-padding: 42px 42px 46px 42px;
+}
+
+.provider-gallery-summary {
+    -fx-font-size: 14px;
+    -fx-text-fill: #858899;
+}
+
+.provider-gallery-error {
+    -fx-text-fill: #BA2424;
+}
+
+.provider-gallery-tools {
+    -fx-padding: 0 0 13px 0;
+    -fx-border-color: transparent transparent #E6E8EF transparent;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.provider-search {
+    -fx-pref-height: 40px;
+    -fx-background-color: white;
+    -fx-background-radius: 9px;
+    -fx-border-color: #DFE2EA;
+    -fx-border-radius: 9px;
+    -fx-padding: 0 13px;
+    -fx-font-size: 13px;
+    -fx-prompt-text-fill: #A0A4B3;
+}
+
+.provider-search:focused {
+    -fx-border-color: #D71920;
+}
+
+.provider-filter {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0px;
+    -fx-border-color: transparent;
+    -fx-border-width: 0 0 2px 0;
+    -fx-padding: 9px 1px;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #858899;
+    -fx-cursor: hand;
+}
+
+.provider-filter:hover {
+    -fx-text-fill: #252638;
+}
+
+.provider-filter:selected {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #D71920 transparent;
+    -fx-text-fill: #D71920;
+}
+
+.provider-gallery {
+    -fx-background-color: transparent;
+    -fx-padding: 2px 0 0 0;
+}
+
+.provider-tile {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+.provider-tile:hover .provider-tile-name {
+    -fx-text-fill: #D71920;
+}
+
+.provider-cover {
+    -fx-background-color: #E8E9EF;
+    -fx-background-radius: 12px;
+}
+
+.provider-cover-empty {
+    -fx-background-color: #FDE7E9;
+    -fx-border-color: #F5C4C8;
+    -fx-border-radius: 12px;
+}
+
+.provider-cover-icon {
+    -fx-font-size: 44px;
+    -fx-text-fill: #D71920;
+}
+
+.provider-cover-help {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #D71920;
+}
+
+.provider-cover-label {
+    -fx-background-color: rgba(25, 28, 42, 0.70);
+    -fx-background-radius: 4px;
+    -fx-padding: 3px 7px;
+    -fx-font-size: 9px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.provider-tile-name {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #252638;
+}
+
+.provider-tile-meta {
+    -fx-font-size: 12px;
+    -fx-text-fill: #858899;
+}
+
+.provider-tile-price {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #252638;
+}
+
+.provider-tile-pending {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #D71920;
+}
+
+.provider-new-tile {
+    -fx-background-color: white;
+    -fx-background-radius: 12px;
+    -fx-border-color: #D71920;
+    -fx-border-radius: 12px;
+    -fx-border-width: 2px;
+    -fx-border-style: dashed;
+    -fx-cursor: hand;
+}
+
+.provider-new-tile:hover {
+    -fx-background-color: #FFF7F8;
+}
+
+.provider-new-plus {
+    -fx-font-size: 34px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #D71920;
+}
+
+.provider-new-text {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #D71920;
+}
+/* Detalle del servicio del proveedor */
+
+.provider-detail-content {
+    -fx-padding: 38px 42px 50px 42px;
+}
+
+.provider-detail-panel {
+    -fx-background-color: white;
+    -fx-background-radius: 14px;
+    -fx-border-color: #E7E9EF;
+    -fx-border-radius: 14px;
+    -fx-padding: 28px 30px 32px 30px;
+}
+
+.provider-detail-panel .section-title {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #252638;
+}
+
+.provider-detail-panel .separator .line {
+    -fx-border-color: #E9EAF0;
+    -fx-border-width: 1px 0 0 0;
+}
+
+.provider-detail-panel .service-form {
+    -fx-padding: 0;
+}
+
+.provider-detail-panel .service-form .text-field,
+.provider-detail-panel .service-form .date-picker {
+    -fx-pref-height: 40px;
+}
+
+.provider-detail-panel .service-form .text-area {
+    -fx-background-color: white;
+    -fx-background-radius: 9px;
+    -fx-border-color: #DFE2EA;
+    -fx-border-radius: 9px;
+}
+
+.provider-detail-panel .service-form .text-area:focused {
+    -fx-border-color: #D71920;
+}
+
+.provider-detail-panel .availability-list,
+.provider-detail-panel .publication-list {
+    -fx-background-color: white;
+    -fx-border-color: #E4E6ED;
+    -fx-border-radius: 9px;
+    -fx-background-radius: 9px;
+}
+/* Pestañas del detalle del servicio */
+
+.provider-detail-service-name {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #252638;
+}
+
+.provider-detail-tabs {
+    -fx-background-color: transparent;
+    -fx-tab-min-height: 42px;
+}
+
+.provider-detail-tabs .tab-header-area {
+    -fx-padding: 0;
+}
+
+.provider-detail-tabs .tab-header-background {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #E5E7ED transparent;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.provider-detail-tabs .tab {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-border-color: transparent;
+    -fx-padding: 8px 18px;
+    -fx-cursor: hand;
+}
+
+.provider-detail-tabs .tab .tab-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #858899;
+}
+
+.provider-detail-tabs .tab:hover .tab-label {
+    -fx-text-fill: #252638;
+}
+
+.provider-detail-tabs .tab:selected {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #D71920 transparent;
+    -fx-border-width: 0 0 2px 0;
+}
+
+.provider-detail-tabs .tab:selected .tab-label {
+    -fx-text-fill: #D71920;
+}
+
+.provider-detail-tabs .tab-content-area {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.provider-tab-content {
+    -fx-padding: 26px 0 6px 0;
+}
+/* Quita el borde azul de foco de las pestanas */
+
+.provider-detail-tabs .tab,
+.provider-detail-tabs .tab:focused,
+.provider-detail-tabs .tab:selected {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* Catalogo de servicios para organizadores */
+
+.catalog-service-list {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 2px;
+}
+
+.catalog-service-list .list-cell {
+    -fx-background-color: white;
+    -fx-border-color: #E8E9EF;
+    -fx-border-width: 1px;
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+    -fx-padding: 16px;
+}
+
+.catalog-service-list .list-cell:empty {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.catalog-service-list .list-cell:hover {
+    -fx-border-color: #E79AA0;
+    -fx-border-width: 1.5px;
+    -fx-cursor: hand;
+}
+
+.catalog-service-list .list-cell:selected {
+    -fx-background-color: white;
+    -fx-border-color: #D71920;
+    -fx-border-width: 2px;
+}
+
+.catalog-service-name {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #252638;
+}
+
+.catalog-category-icon {
+    -fx-font-size: 24px;
+    -fx-min-width: 42px;
+    -fx-pref-width: 42px;
+    -fx-min-height: 42px;
+    -fx-pref-height: 42px;
+    -fx-alignment: center;
+    -fx-background-color: #FFF0F1;
+    -fx-background-radius: 10px;
+}
+
+.service-detail-data {
+    -fx-background-color: #F8F9FC;
+    -fx-background-radius: 10px;
+    -fx-padding: 13px;
+}
+
+.service-image {
+    -fx-background-color: #F8F9FC;
+}
+
+.public-question {
+    -fx-background-color: #F8F9FC;
+    -fx-border-color: #E8E9EF;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-padding: 12px;
+}
+/* CU12: solicitudes y propuestas */
+
+.cu12-content {
+    -fx-background-color: #F8F9FC;
+    -fx-spacing: 20;
+}
+
+.cu12-list {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-border-color: transparent;
+}
+
+.cu12-list .list-cell {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-border-color: #E8E9EF;
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+    -fx-padding: 18;
+    -fx-text-fill: #252638;
+    -fx-font-size: 14px;
+}
+
+.cu12-list .list-cell:empty {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.cu12-list .list-cell:filled:hover {
+    -fx-background-color: #FFF8F8;
+    -fx-border-color: #E79AA0;
+    -fx-cursor: hand;
+}
+
+.cu12-list .list-cell:filled:selected {
+    -fx-background-color: #FFF0F1;
+    -fx-border-color: #D71920;
+    -fx-border-width: 2;
+    -fx-text-fill: #252638;
+}
+
+.cu12-content .button {
+    -fx-background-radius: 10;
+    -fx-padding: 12 20;
+    -fx-cursor: hand;
+}
+
+.cu12-content .btn-primary {
+    -fx-background-color: #D71920;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.cu12-content .btn-primary:hover {
+    -fx-background-color: #B9151B;
+}
+/* Tarjetas de solicitudes y propuestas CU12 */
+
+.cu12-card-title {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #252638;
+}
+
+.cu12-card-detail {
+    -fx-font-size: 13px;
+    -fx-text-fill: #626578;
+}
+
+.cu12-price {
+    -fx-font-size: 23px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #D71920;
+}
+
+.cu12-state {
+    -fx-padding: 6 12;
+    -fx-background-radius: 20;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.cu12-pending {
+    -fx-background-color: #FFF3DC;
+    -fx-text-fill: #A96A00;
+}
+
+.cu12-negotiating {
+    -fx-background-color: #E8F1FF;
+    -fx-text-fill: #2459A6;
+}
+
+.cu12-selected {
+    -fx-background-color: #E5F6EC;
+    -fx-text-fill: #237344;
+}
+
+.cu12-rejected {
+    -fx-background-color: #FDE9EA;
+    -fx-text-fill: #B9151B;
+}
+
+.cu12-neutral {
+    -fx-background-color: #F0F0F4;
+    -fx-text-fill: #626578;
+}

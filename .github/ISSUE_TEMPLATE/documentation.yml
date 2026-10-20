@@ -1,0 +1,47 @@
+name: Documentación
+description: Corregir o actualizar documentación técnica asociada al repositorio.
+title: "[DOC] "
+labels:
+  - "tipo:documentacion"
+  - "modulo:documentacion"
+  - "prioridad:media"
+body:
+  - type: dropdown
+    id: document
+    attributes:
+      label: Documento o recurso
+      options:
+        - README
+        - CONTRIBUTING
+        - Diagrama UML
+        - Documentación técnica del código
+        - Configuración de GitHub
+        - Referencia a PMP o SRS
+        - Otro
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema o necesidad
+      description: Indique qué está incompleto, incorrecto, desactualizado o difícil de entender.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_change
+    attributes:
+      label: Cambio esperado
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: Fuente que debe respetarse
+      description: Relacione la sección del PMP, SRS, caso de uso, Issue o decisión del equipo.
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmaciones
+      options:
+        - label: Verifiqué cuál es la versión vigente antes de solicitar el cambio.
+          required: true

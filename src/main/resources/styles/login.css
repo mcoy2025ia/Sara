@@ -1,0 +1,159 @@
+.login-root {
+    -fx-background-color: #f7f7f9;
+    -fx-padding: 40px;
+}
+
+.login-card {
+    -fx-background-color: white;
+    -fx-background-radius: 16px;
+    -fx-border-radius: 16px;
+    -fx-border-color: #ececf0;
+    -fx-padding: 34px;
+    -fx-spacing: 12px;
+    -fx-pref-width: 420px;
+    -fx-max-width: 420px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.08), 18, 0, 0, 5);
+}
+
+.login-icon {
+    -fx-font-size: 38px;
+}
+
+.login-brand {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #d71920;
+}
+
+.login-caption {
+    -fx-font-size: 11px;
+    -fx-text-fill: #9293a2;
+}
+
+.login-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #252638;
+}
+
+.login-muted {
+    -fx-font-size: 13px;
+    -fx-text-fill: #85869a;
+}
+
+.login-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #303247;
+}
+
+.login-card .text-field,
+.login-card .password-field {
+    -fx-pref-height: 45px;
+    -fx-background-color: white;
+    -fx-border-color: #dedfe6;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 0 12px;
+}
+
+.login-card .text-field:focused,
+.login-card .password-field:focused {
+    -fx-border-color: #d71920;
+}
+
+.login-button {
+    -fx-background-color: #d71920;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-padding: 13px 20px;
+    -fx-cursor: hand;
+}
+
+.login-button:hover {
+    -fx-background-color: #bd151b;
+}
+
+.login-guest-button {
+    -fx-background-color: white;
+    -fx-text-fill: #d71920;
+    -fx-font-weight: bold;
+    -fx-border-color: #d71920;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 12px 20px;
+    -fx-cursor: hand;
+}
+
+.login-guest-button:hover {
+    -fx-background-color: #fff0f1;
+}
+
+.login-error {
+    -fx-text-fill: #c62828;
+    -fx-font-size: 12px;
+    -fx-padding: 4px 0;
+}
+
+.login-password-box {
+    -fx-pref-height: 45px;
+}
+
+.login-password-field {
+    -fx-padding: 0 46px 0 12px;
+}
+
+.login-eye-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+.login-eye-button:hover {
+    -fx-background-color: #f1f1f4;
+    -fx-background-radius: 6px;
+}
+
+.logout-link {
+    -fx-text-fill: #d71920;
+    -fx-font-size: 11px;
+    -fx-cursor: hand;
+}
+
+.logout-link:hover {
+    -fx-underline: true;
+}
+
+.login-password-box {
+    -fx-pref-height: 45px;
+}
+
+.login-password-field {
+    -fx-padding: 0 46px 0 12px;
+}
+
+.login-eye-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+.login-eye-button:hover {
+    -fx-background-color: #f1f1f4;
+    -fx-background-radius: 6px;
+}
+
+.logout-link {
+    -fx-text-fill: #d71920;
+    -fx-font-size: 11px;
+    -fx-cursor: hand;
+}
+
+.logout-link:hover {
+    -fx-underline: true;
+}

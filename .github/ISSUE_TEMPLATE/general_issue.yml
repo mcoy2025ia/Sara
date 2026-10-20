@@ -1,0 +1,63 @@
+name: Issue general
+description: Registrar una situación que no encaja en las demás plantillas.
+title: "[GENERAL] "
+labels:
+  - "tipo:tarea"
+  - "prioridad:media"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Antes de continuar, revise si corresponde usar Tarea Kanban, Error, Solicitud de cambio o Documentación.
+  - type: dropdown
+    id: module
+    attributes:
+      label: Área afectada
+      options:
+        - Gestión de Eventos
+        - Gestión Financiera
+        - Gestión de Proveedores
+        - Gestión de Invitados
+        - Marketing
+        - Administración
+        - Compartido o transversal
+        - Documentación o gestión
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto
+      description: Explique la situación y por qué debe atenderse.
+    validations:
+      required: true
+  - type: textarea
+    id: expected_result
+    attributes:
+      label: Resultado esperado
+      description: Describa cómo se sabrá que el Issue fue resuelto.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidencia o referencias
+      description: Incluya casos de uso, documentos, imágenes o Issues relacionados.
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Prioridad propuesta
+      options:
+        - Crítica
+        - Alta
+        - Media
+        - Baja
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmación
+      options:
+        - label: Verifiqué que no existe otro Issue equivalente.
+          required: true

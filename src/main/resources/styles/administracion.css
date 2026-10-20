@@ -1,0 +1,41 @@
+/* Estilos específicos de la primera iteración del CU-028. */
+.button.menu-item {
+    -fx-background-color: transparent;
+    -fx-text-fill: #626578;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 14 17;
+    -fx-background-radius: 11;
+    -fx-font-size: 14px;
+    -fx-font-weight: normal;
+}
+.button.menu-item:hover { -fx-background-color: #F4F5F9; }
+.button.menu-item.active { -fx-background-color: #FFF0F1; -fx-text-fill: #D71920; -fx-font-weight: bold; }
+.button.menu-action { -fx-font-size: 12px; -fx-padding: 11 12; }
+.admin-stat-card {
+    -fx-background-color: white;
+    -fx-background-radius: 16;
+    -fx-border-color: #E8E9EF;
+    -fx-border-radius: 16;
+    -fx-padding: 20 24;
+    -fx-spacing: 8;
+    -fx-min-height: 118;
+}
+.admin-stat-value { -fx-font-size: 27px; -fx-font-weight: bold; -fx-text-fill: #D71920; }
+.admin-stat-value-small { -fx-font-size: 17px; -fx-font-weight: bold; -fx-text-fill: #252638; }
+.admin-provider-name { -fx-font-size: 21px; -fx-font-weight: bold; }
+.admin-state { -fx-font-weight: bold; -fx-text-fill: #A96A00; }
+.btn-danger { -fx-background-color: #FFF0F0; -fx-text-fill: #B4232B; }
+.btn-danger:hover { -fx-background-color: #FBE1E3; }
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #E8E9EF;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-table-cell-border-color: #F0F1F5;
+}
+.table-view .column-header-background { -fx-background-color: #F8F9FC; }
+.table-view .column-header, .table-view .filler { -fx-background-color: #F8F9FC; -fx-size: 42px; }
+.table-view .column-header .label { -fx-font-weight: bold; -fx-text-fill: #626578; }
+.table-row-cell { -fx-cell-size: 43px; }
+.table-row-cell:selected { -fx-background-color: #FFF0F1; }
+.table-row-cell:selected .text { -fx-fill: #252638; }

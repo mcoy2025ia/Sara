@@ -1,0 +1,75 @@
+# Compilación Java: Maven, Gradle y salidas manuales
+target/
+build/
+out/
+bin/
+.gradle/
+*.class
+*.jar
+*.war
+*.ear
+!.mvn/wrapper/maven-wrapper.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# Reportes y cobertura generados
+.classpath-cache/
+.coverage/
+jacoco.exec
+
+# Datos locales generados por H2
+*.mv.db
+*.trace.db
+*.lock.db
+*.temp.db
+*.h2.db
+
+# Variables locales, secretos y certificados
+.env
+.env.*
+!.env.example
+application-local.properties
+application-secrets.properties
+*.jks
+*.p12
+*.pem
+
+# Visual Studio Code y otros IDE
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.example.json
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+*.code-workspace
+
+# Archivos temporales de Office
+~$*.docx
+~$*.xlsx
+~$*.pptx
+
+# Logs, volcados y archivos temporales
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+*~
+hs_err_pid*
+replay_pid*
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Paquetes de entrega generados localmente
+*.zip
+*.tar
+*.tar.gz
+
+# Documentos cargados localmente durante las pruebas
+/data/documentos-proveedores/

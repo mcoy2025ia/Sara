@@ -1,0 +1,73 @@
+name: Solicitud de cambio
+description: Proponer un cambio de requisito, alcance, regla de negocio o diseño.
+title: "[CAMBIO][CU-XX] "
+labels:
+  - "tipo:cambio"
+  - "prioridad:media"
+body:
+  - type: dropdown
+    id: module
+    attributes:
+      label: Módulo o área afectada
+      options:
+        - Gestión de Eventos
+        - Gestión Financiera
+        - Gestión de Proveedores
+        - Gestión de Invitados
+        - Marketing
+        - Administración
+        - Compartido o transversal
+        - Documentación o gestión
+    validations:
+      required: true
+  - type: input
+    id: use_case
+    attributes:
+      label: Caso de uso o requisito relacionado
+      placeholder: CU-12, RF-___ / No aplica
+    validations:
+      required: true
+  - type: textarea
+    id: current_state
+    attributes:
+      label: Definición vigente
+      description: Resuma qué establece actualmente el SRS, el caso de uso o la implementación.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Cambio propuesto
+      description: Describa exactamente qué se desea modificar.
+    validations:
+      required: true
+  - type: textarea
+    id: justification
+    attributes:
+      label: Justificación y beneficio
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Análisis de impacto
+      description: Considere esfuerzo, fechas, datos, pruebas, documentos y otros módulos.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Criterios de aceptación del cambio
+      placeholder: |
+        - [ ] El equipo aprobó la decisión.
+        - [ ] Se actualizó el caso de uso afectado.
+        - [ ] Se ajustaron estimaciones y tareas si corresponde.
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmación
+      options:
+        - label: No iniciaré la implementación hasta que se revise el impacto y se apruebe el cambio.
+          required: true

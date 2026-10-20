@@ -1,0 +1,90 @@
+name: Reporte de error
+description: Informar un comportamiento incorrecto y reproducible del sistema.
+title: "[ERROR][MÓDULO] "
+labels:
+  - "tipo:error"
+  - "prioridad:alta"
+body:
+  - type: dropdown
+    id: module
+    attributes:
+      label: Módulo afectado
+      options:
+        - Gestión de Eventos
+        - Gestión Financiera
+        - Gestión de Proveedores
+        - Gestión de Invitados
+        - Marketing
+        - Administración
+        - Compartido o transversal
+    validations:
+      required: true
+  - type: input
+    id: use_case
+    attributes:
+      label: Caso de uso relacionado
+      placeholder: CU-12 / No identificado
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Descripción del error
+      description: Explique qué falla y cuál es su impacto.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Pasos para reproducirlo
+      placeholder: |
+        1. Iniciar sesión como...
+        2. Abrir...
+        3. Seleccionar...
+        4. Observar...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Resultado esperado
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Resultado actual
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Entorno
+      placeholder: Rama o versión, sistema operativo, versión de Java y datos de prueba usados.
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severidad
+      options:
+        - Bloqueante - impide continuar o compromete datos
+        - Alta - afecta una función principal sin alternativa adecuada
+        - Media - existe una alternativa temporal
+        - Baja - impacto menor o visual
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidencia
+      description: Arrastre capturas, registros o resultados de pruebas y elimine datos sensibles.
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmaciones
+      options:
+        - label: Intenté reproducir el error más de una vez.
+          required: true
+        - label: Verifiqué que no existe otro Issue equivalente.
+          required: true

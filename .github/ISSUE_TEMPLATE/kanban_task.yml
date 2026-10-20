@@ -1,0 +1,114 @@
+name: Tarea Kanban
+description: Registrar una tarea planificada del sprint o asociada a un caso de uso.
+title: "[TAREA][CU-XX] "
+labels:
+  - "tipo:tarea"
+  - "prioridad:media"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use este formulario para una unidad de trabajo verificable. Después de crearla, asigne responsable, sprint y estado en GitHub Project, y mantenga sincronizado el Control de Alcance en Excel.
+  - type: dropdown
+    id: module
+    attributes:
+      label: Módulo
+      options:
+        - Gestión de Eventos
+        - Gestión Financiera
+        - Gestión de Proveedores
+        - Gestión de Invitados
+        - Marketing
+        - Administración
+        - Compartido o transversal
+        - Documentación o gestión
+    validations:
+      required: true
+  - type: input
+    id: use_case
+    attributes:
+      label: Caso de uso relacionado
+      description: Escriba el identificador canónico; use "No aplica" si no corresponde.
+      placeholder: CU-12
+    validations:
+      required: true
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objetivo
+      description: Explique el resultado concreto que debe producir esta tarea.
+      placeholder: Implementar la decisión de aceptar o rechazar una solicitud de ejecución.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Alcance de la tarea
+      description: Indique qué incluye y, si evita confusiones, qué queda por fuera.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Criterios de aceptación
+      description: Escriba condiciones observables y comprobables.
+      placeholder: |
+        - [ ] El proveedor puede aceptar la solicitud.
+        - [ ] El proveedor puede rechazarla e indicar el motivo.
+        - [ ] El sistema conserva la decisión y la muestra al organizador.
+    validations:
+      required: true
+  - type: input
+    id: estimated_hours
+    attributes:
+      label: Horas estimadas
+      description: Deben coincidir con la planificación vigente.
+      placeholder: "6"
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Prioridad
+      options:
+        - Crítica
+        - Alta
+        - Media
+        - Baja
+    validations:
+      required: true
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: Complejidad del caso de uso
+      description: Seleccione "No aplica" si la tarea no corresponde a un caso de uso.
+      options:
+        - No aplica
+        - Trivial
+        - No trivial
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencias o bloqueos conocidos
+      placeholder: Depende de #___ / Ninguno.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidencia esperada
+      description: Indique cómo se demostrará que la tarea quedó terminada.
+      placeholder: Pruebas JUnit, captura de interfaz o enlace al PR.
+    validations:
+      required: true
+  - type: checkboxes
+    id: readiness
+    attributes:
+      label: Confirmaciones
+      options:
+        - label: Verifiqué que no existe otro Issue equivalente.
+          required: true
+        - label: Los criterios de aceptación son comprobables.
+          required: true
+        - label: Actualizaré el estado y las horas faltantes en el Control de Alcance.
+          required: true
