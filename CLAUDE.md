@@ -25,7 +25,7 @@ java -cp "target/classes:target/test-classes:target/dependency/*" PruebaCU01
 
 Surefire only picks up `*Test.java` classes. Files named `Prueba*.java` are manual mains and are skipped by `mvn test`.
 
-To point the app or a run at a different database, pass `-Dnexteventux.db.url=jdbc:h2:...`. The default is `jdbc:h2:./data/nexteventux`, relative to the working directory.
+To point the app or a run at a different database, pass `-Dnexteventux.db.url=jdbc:h2:...`. The default is an absolute path, `~/.nexteventux/nexteventux` (change the folder with `-Dnexteventux.home=...`).
 
 ## Architecture
 
@@ -41,7 +41,8 @@ Most files follow the `ControllerX` / `ServiceX` / `RepositoryX` naming. Control
 
 - A new migration must be added to that list in `inicializarEsquema()`. Dropping a file into the folder does nothing.
 - Migration filenames repeat prefixes (`002_`, `003_`, `004_` appear several times). The Java list defines the execution order, not the filenames.
-- The database is file-based (`data/nexteventux.mv.db`, gitignored). Do not delete it to reset state, since it holds user records; use the explicit seed loaders instead.
+- Migrations 001 to 009 are repeatable and run on every initialization. From 010 on, register them with `ejecutarUnaVez(...)` in `inicializarEsquema()`: they run once and are recorded in `Esquema_version`. Use `verificarSinDuplicados` as the pre-check before adding a UNIQUE index. Migration numbers are reserved per owner in `docs/hoja-de-ruta-correcciones.md`.
+- The database is file-based (`~/.nexteventux/nexteventux.mv.db`). Do not delete it to reset state, since it holds user records; use the explicit seed loaders instead.
 - `seed.sql` and the `config.Cargar*` classes are opt-in. They are never loaded automatically on startup, and `CargarDatosEjemplo` refuses to run if tables already contain data.
 
 **Tests.** JUnit 5 tests cover services, repositories, and schema/migrations. Several tests create their own temporary H2 databases. `DatabaseConnection.reiniciarInicializacion()` resets the per-JVM init cache and is used by migration tests.
