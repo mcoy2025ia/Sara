@@ -108,6 +108,8 @@ public class DatabaseConnection {
         // Cada una usa el número reservado en docs/hoja-de-ruta-correcciones.md.
         ejecutarUnaVez(connection, "010_organizador_usuario_unico.sql",
                 c -> verificarSinDuplicados(c, "Organizador", "id_usuario"));
+        ejecutarUnaVez(connection, "011_usuario_unico.sql",
+                c -> verificarSinDuplicados(c, "Usuario", "LOWER(usuario)"));
         actualizarContadorEventos(connection);
     }
 
