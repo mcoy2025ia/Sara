@@ -140,6 +140,31 @@ class DatabaseConnectionTest {
         }
     }
 
+    @Test
+    void unaBaseConUsuariosRepetidosSinDistinguirMayusculasSeDetiene() throws Exception {
+        try (Connection connection = DatabaseConnection.getConnection(url);
+                Statement statement = connection.createStatement()) {
+            insertarUsuario(statement, 1);
+            statement.execute("DROP INDEX uq_usuario_usuario");
+            statement.execute("DELETE FROM Esquema_version WHERE nombre = '011_usuario_unico.sql'");
+            statement.executeUpdate("INSERT INTO Usuario (id_usuario, nombre, usuario, contraseña, estado, "
+                    + "fecha_registro, acepta_marketing, tipo_usuario) VALUES (2, 'Repetido', 'PRUEBA1', "
+                    + "'x', 'ACTIVO', CURRENT_TIMESTAMP, FALSE, 'CLIENTE')");
+        }
+        DatabaseConnection.reiniciarInicializacion();
+
+        SQLException error = assertThrows(SQLException.class, () -> DatabaseConnection.getConnection(url));
+        assertTrue(error.getMessage().contains("Usuario.LOWER(usuario)"), error.getMessage());
+
+        DatabaseConnection.reiniciarInicializacion();
+        try (Connection connection = openSinInicializar();
+                Statement statement = connection.createStatement();
+                ResultSet result = statement.executeQuery("SELECT COUNT(*) FROM Usuario")) {
+            result.next();
+            assertEquals(2, result.getInt(1));
+        }
+    }
+
     private Connection openSinInicializar() throws SQLException {
         return java.sql.DriverManager.getConnection(url, "sa", "");
     }
